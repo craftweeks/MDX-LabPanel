@@ -33,10 +33,6 @@ v0.1 2016-12-23
 - Move instantly after press a direction button
 - Set custom Z0 level
 
-# Future Development Plan
-- Choose a COM port number
-- Spindle On/Off
-
 # Copyright and License
 **Copyright 2016 - 2017, Chris KY FUNG and the contributors in DTClub.swc.HK CNC group**
 
