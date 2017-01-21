@@ -9,7 +9,7 @@ A custom control panel developed for Roland MODELA MDX-15/20 desktop CNC milling
  * Useful for resuming interrupted machining processes with exact the same ZO setting, no matter the machine has been powered off or reset accidentally 
  
 #Screenshot
-**![Screenshot of v0.2](https://github.com/chriskyfung/modela_mdx-15_20_control_panel_scilab/blob/master/Screenshot%20of%20v0.2.png)**
+**![Screenshot of v0.2](Screenshot%20of%20v0.2.png)**
 
 # Prerequisite
 * Scilab 5.5 or above (recommended)
