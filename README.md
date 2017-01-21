@@ -6,7 +6,10 @@ A custom control panel developed for Roland MODELA MDX-15/20 desktop CNC milling
 - GUI buttons and indicators for manipulating the tool position of this 3-axis CNC milling machine
 - Enables to input the ZO value (custom zero position for z-axis) accurately
  * Instead of leveling the tool with your eyes and UP and DOWN buttons on the machine
- * Useful for resuming interrupted machining processes with exact the same ZO setting, no matter the machine has been powered off or reset accidentally
+ * Useful for resuming interrupted machining processes with exact the same ZO setting, no matter the machine has been powered off or reset accidentally 
+ 
+#Screenshot
+<a href='http://101img8.info/img-5891fdd97b172.html'><img src='http://101img8.info/thumb/5891fdd97b172.png' alt='image' /></a>
 
 # Prerequisite
 * Scilab 5.5 or above (recommended)
