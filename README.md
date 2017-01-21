@@ -20,8 +20,9 @@ A custom control panel developed for Roland MODELA MDX-15/20 desktop CNC milling
 3. Press **Reset** to zero out z-axis
 4. Press **Home** to zero out x- and y-axes
 
-## YouTube:
-Please visit and subscribe our YouTube channel [DTClub.swc.HK](https://www.youtube.com/channel/UCGlT2itihZuRxMckNcfcA3A)
+# YouTube:
+Please visit and subscribe our YouTube channel [**[DTClub.swc.HK](https://www.youtube.com/channel/UCGlT2itihZuRxMckNcfcA3A)**]
+
 * Introduction for v0.1. - [Custom GUI Control Panel for Roland MODELA MDX-15/20 CNC Machine (Scilab-Programmed GUI)](https://youtu.be/1qtFWHFQnls)
 
 # Version History
