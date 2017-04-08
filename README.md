@@ -27,7 +27,9 @@ A custom control panel developed for Roland MODELA MDX-15/20 desktop CNC milling
 # YouTube:
 Please visit and subscribe our YouTube channel [**[DTClub.swc.HK](https://www.youtube.com/channel/UCGlT2itihZuRxMckNcfcA3A)**]
 
-* Introduction for v0.1. - [Custom GUI Control Panel for Roland MODELA MDX-15/20 CNC Machine (Scilab-Programmed GUI)](https://youtu.be/1qtFWHFQnls)
+* Introduction for v0.1. - 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1qtFWHFQnls" frameborder="0" allowfullscreen></iframe>
+[Custom GUI Control Panel for Roland MODELA MDX-15/20 CNC Machine (Scilab-Programmed GUI)](https://youtu.be/1qtFWHFQnls)
 
 # Version History
 v0.2 2017-1-6
@@ -41,5 +43,3 @@ v0.1 2016-12-23
 **Copyright 2016 - 2017, Chris KY FUNG and the contributors in DTClub.swc.HK CNC group**
 
 **License** GNU AFFERO GENERAL PUBLIC LICENSE Version 3 (GNU AGPLv3)
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/1qtFWHFQnls" frameborder="0" allowfullscreen></iframe>
