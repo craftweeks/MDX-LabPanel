@@ -41,3 +41,5 @@ v0.1 2016-12-23
 **Copyright 2016 - 2017, Chris KY FUNG and the contributors in DTClub.swc.HK CNC group**
 
 **License** GNU AFFERO GENERAL PUBLIC LICENSE Version 3 (GNU AGPLv3)
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1qtFWHFQnls" frameborder="0" allowfullscreen></iframe>
