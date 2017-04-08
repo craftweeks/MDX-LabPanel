@@ -53,6 +53,10 @@ v0.1 2016-12-23 (The version shown in the introduction video in YouTube)
 - Move instantly after press a direction button
 - Set custom Z0 level
 
+# Download
+- [v0.3](https://github.com/chriskyfung/modela_mdx-15_20_control_panel_scilab/archive/v0.3.zip)
+- [v0.2](https://github.com/chriskyfung/modela_mdx-15_20_control_panel_scilab/archive/v0.2.zip)
+
 # Copyright and License
 **Copyright 2016 - 2017, Chris KY FUNG and the contributors in DTClub.swc.HK CNC group**
 
