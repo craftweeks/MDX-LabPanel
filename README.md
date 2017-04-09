@@ -59,6 +59,9 @@ v0.1 2016-12-23 (The version shown in the introduction video in YouTube)
 - Set custom Z0 level
 
 ## Copyright and License
-**Copyright 2016 - 2017, Chris KY FUNG and the contributors in DTClub.swc.HK CNC group**
+
+![Logo of Craftweeks - DTClub.swc.HK](https://yt3.ggpht.com/-pWuRX2_jcLk/AAAAAAAAAAI/AAAAAAAAAAA/K3QMmnUWSf8/s100-c-k-no-mo-rj-c0xffffff/photo.jpg) 
+
+**Copyright 2016 - 2017, Chris KY FUNG and the contributors in [DTClub.swc.HK CNC group](https://www.facebook.com/dtclubswchk/)**
 
 **License** GNU AFFERO GENERAL PUBLIC LICENSE Version 3 (GNU AGPLv3)
