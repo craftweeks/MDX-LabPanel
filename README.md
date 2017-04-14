@@ -8,7 +8,7 @@ A custom control panel developed for Roland MODELA MDX-15/20 desktop CNC milling
  
 #Screenshot
 
-<a href='https://kl7.info/img-58f0e64bdbbe5.html'>v0.2<img src='https://kl7.info/thumb/58f0e64bdbbe5.png' alt='image'></a>
+<a href='https://kl7.info/img-58f0e64bdbbe5.html'>v0.2<img src='https://kl7.info/thumb/58f0e64bdbbe5.png' alt='image' height="200"></a>
 <a href='https://kl7.info/img-58e88857deb42.html'>v0.3<img src='https://kl7.info/thumb/58e88857deb42.png' alt='image' height="200"></a>
 
 # Prerequisite
