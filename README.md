@@ -13,7 +13,7 @@ A custom control panel developed for Roland MODELA MDX-15/20 desktop CNC milling
  
 #Screenshot
 
-<a href='https://kl7.info/img-5891fdd97b172.html'>v0.2<img src='https://101img.com/upload/small/2017/02/01/5891fdd97b0cc.png' alt='image' height="213"/></a> 
+<a href='https://kl7.info/img-58f0e64bdbbe5.html'>v0.2<img src='https://101img.com/upload/small/2017/04/14/58f0e64bdbb42.png' alt='image'/></a> 
 <a href='https://kl7.info/img-58e88857deb42.html'>v0.3<img src='https://kl7.info/thumb/58e88857deb42.png' alt='image'></a>
 
 ## Prerequisite
@@ -36,7 +36,10 @@ A custom control panel developed for Roland MODELA MDX-15/20 desktop CNC milling
 Please visit and subscribe our YouTube channel [**[DTClub.swc.HK](https://www.youtube.com/channel/UCGlT2itihZuRxMckNcfcA3A)**]
 
 * Introduction for v0.1. - 
-[Custom GUI Control Panel for Roland MODELA MDX-15/20 CNC Machine (Scilab-Programmed GUI)](https://youtu.be/1qtFWHFQnls)
+[Open Source GUI Control Panel for Roland MODELA MDX-15/20 CNC Machine (Scilab-Programmed GUI)](https://youtu.be/1qtFWHFQnls)
+
+* New feature highlight for v0.3 - 
+[Introduce New Features in our DIY Control Panel V0.3 for Roland MODELA MDX-15/20 CNC Machine](https://youtu.be/dMVLkgNrw48)
 
 ## Version History
 v0.3 2017-4-8
@@ -52,7 +55,7 @@ v0.2 2017-1-6
 - Enable to move to a target position at once, by toggling **Direct Go**
 - Added buttons for homing +X, -X, +Y and -Y position
 
-<a href='https://kl7.info/img-5891fdd97b172.html'>v0.2<img src='https://101img.com/upload/small/2017/02/01/5891fdd97b0cc.png' alt='image'/></a>
+<a href='https://kl7.info/img-58f0e64bdbbe5.html'>v0.2<img src='https://101img.com/upload/small/2017/04/14/58f0e64bdbb42.png' alt='image' width="250"/></a>
 
 v0.1 2016-12-23 (The version shown in the introduction video in YouTube)
 - Move instantly after press a direction button
