@@ -4,7 +4,8 @@
 
 //mode(0);
 //lines(0);
-
+pathname = get_absolute_file_path('ControlPanel.sce');
+chdir(pathname);
 exec ("commands.sce", -1);
 
 function form = new_form()
