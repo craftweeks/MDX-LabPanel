@@ -590,14 +590,13 @@ function frameobj = new_frameXY()
 	frameobj.Position = "0|80|198|132";
 	frameobj.Tag = "frameXY";
 	frameobj.String = "frameXY"
-	frameobj.BackgroundColor = "1|1|1";     
+	frameobj.BackgroundColor = "1|0|1";     
 endfunction
 
 handles.frameXY = new_frameXY()
 handles.axisXY = newaxes(handles.frameXY)
 handles.axisXY.auto_clear = 'on';
-plot(handles.axisXY, 0,0);
-isoview(0,XMAX, 0, YMAX);
+updateAxisXY(%nan, %nan);
 
 handles.imageLogo = new_imageLogo();
 

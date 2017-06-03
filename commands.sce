@@ -385,9 +385,19 @@ function checkboxSON_callback()
 endfunction
 
 function updateAxisXY(x0,y0)
-   set(handles.frameXY, 'Position', [0, 80-y0*(80/YMAX), 198, 132])
+   set(handles.frameXY, 'Position', [0, 80-round(y0*(80/YMAX)), 198, 132])
    drawlater();
    plot(handles.axisXY, x0, y0, 'b*')
-   isoview(0,XMAX, 0, YMAX);
+   isoview2(-2,XMAX, -2, YMAX);
    drawnow();
+endfunction
+
+function isoview2(xmin, xmax, ymin, ymax)
+    version_numbers = getversion('scilab');
+    if version_numbers(1) >= 6 then
+        isoview on;
+        replot([xmin, ymin, xmax, ymax],handles.axisXY)
+    else
+        isoview(xmin, xmax, ymin, ymax);
+    end
 endfunction
