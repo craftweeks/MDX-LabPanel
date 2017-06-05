@@ -5,13 +5,12 @@
 //mode(0);
 //lines(0);
 
-exec ("commands.sce", -1);
 
 function form = new_form()
 	form = figure( "visible", "off", "menubar_visible", "off", "toolbar_visible", "off", "infobar_visible", "off");
-	form.figure_position = [ 805 , 222];
+	form.figure_position = [ 100 , 222];
 	form.axes_size = [ 684 , 438];
-	form.figure_name = "Control Panel";
+	form.figure_name = "MDX-15/20 Control Panel - Craftweeks";
 	form.tag = "form";
 	form.background = color(240 , 240 , 240);
 //	form.event_handler = "form_callback";
@@ -22,38 +21,71 @@ endfunction
 handles.dummy = 0;
 handles.form = new_form();
 
-function editfieldobj = new_editbox1()
+function textfieldobj = new_textfield_X()
+	textfieldobj = uicontrol(findobj("tag" , "form"),"Style","text");
+	textfieldobj.Position = "320|160|20|22";
+	textfieldobj.Tag = "textfieldX";
+	textfieldobj.String = "X";
+	textfieldobj.BackgroundColor = "-1|-1|-1";
+	textfieldobj.Callback = "textfield1_Form_callback";
+endfunction
+
+handles.textfield_X = new_textfield_X()
+
+function editfieldobj = new_editboxX()
 	editfieldobj = uicontrol(findobj("tag" , "form"),"Style","edit");
-	editfieldobj.Position = "340|135|81|22";
+	editfieldobj.Position = "340|160|81|22";
 	editfieldobj.Tag = "XPosition";
 	editfieldobj.String = "NaN";
 	editfieldobj.BackgroundColor = "-1|-1|-1";
-	editfieldobj.Callback = "editbox1_callback";
+	editfieldobj.Callback = "editboxX_callback";
 endfunction
 
-handles.editbox1 = new_editbox1();
+handles.editboxX = new_editboxX();
 
-function editfieldobj = new_editbox2()
+function textfieldobj = new_textfield_Y()
+	textfieldobj = uicontrol(findobj("tag" , "form"),"Style","text");
+	textfieldobj.Position = "320|135|20|22";
+	textfieldobj.Tag = "textfieldY";
+	textfieldobj.String = "Y";
+	textfieldobj.BackgroundColor = "-1|-1|-1";
+	textfieldobj.Callback = "textfield1_Form_callback";
+endfunction
+
+handles.textfield_Y = new_textfield_Y()
+
+function editfieldobj = new_editboxY()
 	editfieldobj = uicontrol(findobj("tag" , "form"),"Style","edit");
-	editfieldobj.Position = "340|110|81|22";
+	editfieldobj.Position = "340|135|81|22";
 	editfieldobj.Tag = "YPosition";
 	editfieldobj.String = "NaN";
 	editfieldobj.BackgroundColor = "-1|-1|-1";
-	editfieldobj.Callback = "editbox2_callback";
+	editfieldobj.Callback = "editboxY_callback";
 endfunction
 
-handles.editbox2 = new_editbox2();
+handles.editboxY = new_editboxY();
 
-function editfieldobj = new_editbox3()
+function textfieldobj = new_textfield_Z()
+	textfieldobj = uicontrol(findobj("tag" , "form"),"Style","text");
+	textfieldobj.Position = "320|110|20|22";
+	textfieldobj.Tag = "textfieldZ";
+	textfieldobj.String = "Z";
+	textfieldobj.BackgroundColor = "-1|-1|-1";
+	textfieldobj.Callback = "textfield1_Form_callback";
+endfunction
+
+handles.textfield_Z = new_textfield_Z()
+
+function editfieldobj = new_editboxZ()
 	editfieldobj = uicontrol(findobj("tag" , "form"),"Style","edit");
-	editfieldobj.Position = "340|85|81|22";
+	editfieldobj.Position = "340|110|81|22";
 	editfieldobj.Tag = "ZPosition";
 	editfieldobj.String = "NaN";
 	editfieldobj.BackgroundColor = "-1|-1|-1";
-	editfieldobj.Callback = "editbox3_callback";
+	editfieldobj.Callback = "editboxZ_callback";
 endfunction
 
-handles.editbox3 = new_editbox3();
+handles.editboxZ = new_editboxZ();
 
 function textfieldobj = new_TextZO()
 	textfieldobj = uicontrol(findobj("tag" , "form"),"Style","text");
@@ -88,16 +120,17 @@ endfunction
 
 handles.pushbuttonSpooler = new_pushbuttonSpooler();
 
-function pushbuttonobj = new_pushbutton2()
+function pushbuttonobj = new_pushbuttonGO()
 	pushbuttonobj = uicontrol(findobj("tag" , "form"),"Style","pushbutton");
 	pushbuttonobj.Position = "340|35|81|25";
-	pushbuttonobj.Tag = "pushbutton2";
+	pushbuttonobj.Tag = "pushbuttonGO";
 	pushbuttonobj.String = "Go";
 	pushbuttonobj.BackgroundColor = "-1|-1|-1";
 	pushbuttonobj.Callback = "go_callback";
+	pushbuttonobj.Enable = "off";
 endfunction
 
-handles.pushbutton2 = new_pushbutton2();
+handles.pushbuttonGO = new_pushbuttonGO();
 
 function pushbuttonobj = new_pushbutton4()
 	pushbuttonobj = uicontrol(findobj("tag" , "form"),"Style","pushbutton");
@@ -244,44 +277,44 @@ handles.pushbutton16 = new_pushbutton16();
 
 function pushbuttonobj = new_pushbutton17()
 	pushbuttonobj = uicontrol(findobj("tag" , "form"),"Style","pushbutton");
-	pushbuttonobj.Position = "325|335|55|25";
+	pushbuttonobj.Position = "322|335|60|25";
 	pushbuttonobj.Tag = "pushbutton17";
-	pushbuttonobj.String = "-Y0";
+	pushbuttonobj.String = "Y0";
 	pushbuttonobj.BackgroundColor = "-1|-1|-1";
-	pushbuttonobj.Callback = "yuphome_callback";
+	pushbuttonobj.Callback = "yminhome_callback";
 endfunction
 
 handles.pushbutton17 = new_pushbutton17();
 
 function pushbuttonobj = new_pushbutton18()
 	pushbuttonobj = uicontrol(findobj("tag" , "form"),"Style","pushbutton");
-	pushbuttonobj.Position = "295|310|55|25";
+	pushbuttonobj.Position = "290|310|60|25";
 	pushbuttonobj.Tag = "pushbutton18";
-	pushbuttonobj.String = "-X0";
+	pushbuttonobj.String = "X0";
 	pushbuttonobj.BackgroundColor = "-1|-1|-1";
-	pushbuttonobj.Callback = "xlefthome_callback";
+	pushbuttonobj.Callback = "xminhome_callback";
 endfunction
 
 handles.pushbutton18 = new_pushbutton18();
 
 function pushbuttonobj = new_pushbutton19()
 	pushbuttonobj = uicontrol(findobj("tag" , "form"),"Style","pushbutton");
-	pushbuttonobj.Position = "350|310|55|25";
+	pushbuttonobj.Position = "350|310|60|25";
 	pushbuttonobj.Tag = "pushbutton19";
-	pushbuttonobj.String = "+X0";
+	pushbuttonobj.String = "Xmax";
 	pushbuttonobj.BackgroundColor = "-1|-1|-1";
-	pushbuttonobj.Callback = "xrighthome_callback";
+	pushbuttonobj.Callback = "xmaxhome_callback";
 endfunction
 
 handles.pushbutton19 = new_pushbutton19();
 
 function pushbuttonobj = new_pushbutton20()
 	pushbuttonobj = uicontrol(findobj("tag" , "form"),"Style","pushbutton");
-	pushbuttonobj.Position = "325|285|55|25";
+	pushbuttonobj.Position = "322|285|60|25";
 	pushbuttonobj.Tag = "pushbutton20";
-	pushbuttonobj.String = "+Y0";
+	pushbuttonobj.String = "Ymax";
 	pushbuttonobj.BackgroundColor = "-1|-1|-1";
-	pushbuttonobj.Callback = "ydownhome_callback";
+	pushbuttonobj.Callback = "ymaxhome_callback";
 endfunction
 
 handles.pushbutton20 = new_pushbutton20();
@@ -465,7 +498,7 @@ handles.popupmenu1 = new_popupmenu1();
 
 function checkboxobj = new_checkbox1()
 	checkboxobj = uicontrol(findobj("tag" , "form"),"Style","checkbox");
-	checkboxobj.Position = "275|35|55|25";
+	checkboxobj.Position = "280|65|55|22";
 	checkboxobj.Tag = "checkbox1";
 	checkboxobj.String = "Direct";
 	checkboxobj.BackgroundColor = "-1|-1|-1";
@@ -475,16 +508,94 @@ endfunction
 
 handles.checkbox1 = new_checkbox1();
 
-function radiobuttonobj = new_radiobutton3()
+function radiobuttonobj = new_radiobuttonMDX15()
 	radiobuttonobj = uicontrol(findobj("tag" , "form"),"Style","radiobutton");
-	radiobuttonobj.Position = "250|397|81|25";
-	radiobuttonobj.Tag = "radiobutton3";
-	radiobuttonobj.String = "MDX-20";
+	radiobuttonobj.Position = "200|397|70|25";
+	radiobuttonobj.Tag = "radiobuttonMDX15";
+	radiobuttonobj.String = "MDX-15";
+	radiobuttonobj.Groupname = "machine_model";
 	radiobuttonobj.BackgroundColor = "-1|-1|-1";
-	radiobuttonobj.Value = radiobuttonobj.Max;
-	//radiobuttonobj.Callback = "radiobutton3_callback";
+	radiobuttonobj.Value = radiobuttonobj.Min;
+	radiobuttonobj.Callback = "setAsMDX15_callback";
 endfunction
 
-handles.radiobutton3 = new_radiobutton3();
+handles.radiobuttonMDX15 = new_radiobuttonMDX15();
+
+
+function radiobuttonobj = new_radiobuttonMDX20()
+	radiobuttonobj = uicontrol(findobj("tag" , "form"),"Style","radiobutton");
+	radiobuttonobj.Position = "270|397|81|25";
+	radiobuttonobj.Tag = "radiobuttonMDX20";
+	radiobuttonobj.String = "MDX-20";
+	radiobuttonobj.Groupname = "machine_model";
+	radiobuttonobj.BackgroundColor = "-1|-1|-1";
+	radiobuttonobj.Value = radiobuttonobj.Max;
+	radiobuttonobj.Callback = "setAsMDX20_callback";
+
+endfunction
+
+handles.radiobuttonMDX20 = new_radiobuttonMDX20();
+
+function textfieldobj = new_textfield_V()
+	textfieldobj = uicontrol(findobj("tag" , "form"),"Style","text");
+	textfieldobj.Position = "300|85|40|22";
+	textfieldobj.Tag = "textfieldV_Form";
+	textfieldobj.String = "Velocity";
+	textfieldobj.BackgroundColor = "-1|-1|-1";
+	textfieldobj.Callback = "textfieldV_Form_callback";
+endfunction
+
+handles.textfield_V = new_textfield_V()
+
+function sliderobj = new_hsliderV()
+	sliderobj = uicontrol(findobj("tag" , "form"),"Style","slider");
+	sliderobj.Position = "340|85|81|22";
+	sliderobj.Tag = "hsliderV_Form";
+	sliderobj.String = "Velocity";
+	sliderobj.BackgroundColor = "-1|-1|-1";
+	sliderobj.Max = 15;
+	sliderobj.Min = 0;
+	sliderobj.SliderStep = [1,10];
+	sliderobj.Value = 15;
+	sliderobj.Callback = "velocity_callback";
+endfunction
+
+handles.hsliderV = new_hsliderV();
+
+function checkboxobj = new_checkboxSON()
+	checkboxobj = uicontrol(findobj("tag" , "form"),"Style","checkbox");
+	checkboxobj.Position = "340|65|81|22";
+	checkboxobj.Tag = "checkboxSON";
+	checkboxobj.String = "Spindle On";
+	checkboxobj.BackgroundColor = "-1|-1|-1";
+	checkboxobj.Value = checkboxobj.Max;
+	checkboxobj.Callback = "checkboxSON_callback";
+endfunction
+
+handles.checkboxSON = new_checkboxSON();
+
+function imageobj = new_imageLogo()
+	imageobj =  uicontrol(findobj("tag" , "form"),"Style","image");
+	imageobj.Position = "540|328|100|100";
+	imageobj.Tag = "imageLogo";
+	imageobj.String = "craftweeks_logo.png"
+	imageobj.BackgroundColor = "-1|-1|-1";
+	imageobj.Value = [1 1 0 0 0];
+endfunction
+
+function frameobj = new_frameXY()
+	frameobj =  uicontrol(findobj("tag" , "form"),"Style","frame");
+	frameobj.Position = "0|80|198|132";
+	frameobj.Tag = "frameXY";
+	frameobj.String = "frameXY"
+	frameobj.BackgroundColor = "1|0|1";     
+endfunction
+
+handles.frameXY = new_frameXY()
+handles.axisXY = newaxes(handles.frameXY)
+handles.axisXY.auto_clear = 'on';
+updateAxisXY(%nan, %nan);
+
+handles.imageLogo = new_imageLogo();
 
 set(handles.form, "visible", "on");

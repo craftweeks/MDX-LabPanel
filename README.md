@@ -13,14 +13,13 @@ A custom control panel developed for Roland MODELA MDX-15/20 desktop CNC milling
  
 #Screenshot
 
-<a href='https://kl7.info/img-58f0e64bdbbe5.html'>v0.2<img src='https://101img.com/upload/small/2017/04/14/58f0e64bdbb42.png' alt='image'/></a> 
-<a href='https://kl7.info/img-58e88857deb42.html'>v0.3<img src='https://kl7.info/thumb/58e88857deb42.png' alt='image'></a>
+<a href='https://kl7.info/img-59328e6e79dd9.html'><img src='https://kl7.info/thumb/59328e6e79dd9.png' alt='image'><br />v0.4</a>
 
 ## Prerequisite
-* Scilab 5.5 or above (recommended)
+* Scilab 5.5 or above (recommended, also compatible with Scilab 6.0 for v0.4 or later)
 > **What is Scilab ?** 
 > Scilab is free and open source software for numerical computation providing a powerful computing environment for engineering and scientific applications. Official Site of Scilab (http://www.scilab.org/)
-* MDX-15/20 is connected with port **COM1**
+* MDX-15/20 is connected with port **COM1 (also COM2 or COM3 for v0.3 or later)**
 
 ## How To Install
 1. If you do not install Scilab, please install it on the computer
@@ -28,7 +27,8 @@ A custom control panel developed for Roland MODELA MDX-15/20 desktop CNC milling
 
 ## How To Use
 1. Launch Scilab
-2. Choose **File** > **Execute**, and then select **ControlPanel.sce** in the file selection dialog
+2. Choose **File** > **Execute**, and then select **__main__.sce** (v0.4 or later) in the file selection dialog
+	- Execute **ControlPanel.sce** for v0.3
 3. Press **Reset** to zero out z-axis
 4. Press **Home** to zero out x- and y-axes
 
@@ -42,6 +42,20 @@ Please visit and subscribe our YouTube channel [**[DTClub.swc.HK](https://www.yo
 [Introduce New Features in our DIY Control Panel V0.3 for Roland MODELA MDX-15/20 CNC Machine](https://youtu.be/dMVLkgNrw48)
 
 ## Version History
+
+v0.4 2017-6-4
+- Enabled the setting for MDX-15
+- Added Spindle on/off
+- Added Feed rate control
+- Added graphical display for indicating tool position
+- Integrated Reset to the first Home operation
+- Optimized the code for X0, XMAX, Y0, YMAX homing
+- Fixed the wrong direction of the Y0 and YMAX homing buttons
+- Fixed the filepath issue
+- Fixed the compatibility with Scilab 6.0.0 or later
+
+<a href='https://kl7.info/img-59328e6e79dd9.html'>v0.4<img src='https://kl7.info/thumb/59328e6e79dd9.png' alt='image'  width="250"></a>
+
 v0.3 2017-4-8
 - Enable to choose the COM port for the machine
 - One click to open *Print Queue* by pressing **Printer**

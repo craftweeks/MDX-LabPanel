@@ -1,32 +1,43 @@
-global X Y Z z0 isDirectGo COM_NUM
+global X Y Z z0 V sON XMAX YMAX isReset isDirectGo COM_NUM
 X = %nan;
 Y = %nan;
 Z = %nan;
 z0 = %nan;
+V = 15;
+SON = 1;
 XMAX = 203.2;
 YMAX = 152.4;
-ZMAX = 60;
-isDirectGo = 0 // get(handles.checkbox1, 'value');
+ZMAX = 60.5;
+isReset = 0;
+isDirectGo = 0; // get(handles.checkbox1, 'value');
 COM_NUM = 1;
 
 function home_callback()
 //Write your callback for  home  here
+if isReset == 0 then
+    reset_callback();
+end
+
 disp('home')
 global X Y Z
 X = 0.0; Y = 0.0; Z = 0.0+z0;
 str_cmd = '^DF;!MC1;!PZ0,0;V15.0;Z0,0,0;!MC0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;';
 send_cmd(str_cmd);
 update_pos_show(X,Y,Z)
+updateAxisXY(X,Y)
 endfunction
 
 function send_cmd(str_cmd)
-if (getos() == "Windows") then 
-    fd = mopen(TMPDIR+'/text_mputl.txt','wt');
-    mputl(str_cmd,fd);
-    mclose(fd);
-    s = sprintf('type %s\\text_mputl.txt > com%d', TMPDIR, COM_NUM);
-    [output,bOK] = dos(s ,'-echo')
-end
+    global isReset
+    if isReset ==1 then
+        if (getos() == "Windows") then 
+            fd = mopen(TMPDIR+'/text_mputl.txt','wt');
+            mputl(str_cmd,fd);
+            mclose(fd);
+            s = sprintf('type %s\\text_mputl.txt > com%d', TMPDIR, COM_NUM);
+            [output,bOK] = dos(s ,'-echo')
+        end
+    end
 endfunction
 
 function update_pos_show(x,y,z)
@@ -34,10 +45,9 @@ function update_pos_show(x,y,z)
    X = x;
    Y = y;
    Z = z;
-   set(handles.editbox1, 'String', msprintf('%.3f',X));
-   set(handles.editbox2, 'String', msprintf('%.3f',Y));
-   set(handles.editbox3, 'String', msprintf('%.3f',Z));
-   //set(handles.messagebox, 'String', '');
+   set(handles.editboxX, 'String', msprintf('%.3f',X));
+   set(handles.editboxY, 'String', msprintf('%.3f',Y));
+   set(handles.editboxZ, 'String', msprintf('%.3f',Z));
 endfunction
 
 function [sx, sy, sz] = scale(x,y,z)
@@ -48,7 +58,8 @@ function [sx, sy, sz] = scale(x,y,z)
 endfunction
 
 function new_cmd = make_cmd(sx,sy,sz)
-new_cmd = '^DF;!MC1;!PZ0,0;V15.0;Z' + msprintf('%.3f',sx) + ',' + msprintf('%.3f',sy) + ','+ msprintf('%.3f',sz) + ';!MC0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;';
+    global V SON
+new_cmd = '^DF;!MC'+ msprintf('%d',SON) +';!PZ0,0;V'+ msprintf('%.1f',V) +';Z' + msprintf('%.3f',sx) + ',' + msprintf('%.3f',sy) + ','+ msprintf('%.3f',sz) + ';!MC0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;';
 endfunction
 
 function relative_move(dx,dy,dz)
@@ -78,6 +89,7 @@ function relative_move(dx,dy,dz)
         disp('Zero Displacement')
        // set(handles.messagebox, 'String', 'Zero Displacement');
     else
+        updateAxisXY(x1,y1);
         update_pos_show(x1,y1,z1)
         if get(handles.checkbox1, 'value') == 1 then
             [sx,sy,sz] = scale(x1,y1,z1-z0);
@@ -92,11 +104,13 @@ function reset_callback()
     //Write your callback for  reset  here
     disp('Reset')
     //set(handles.ZOpos, 'String', '')
-    global Z z0
+    global Z z0 isReset
     Z = 0.0; z0 = 0.0;
     str_cmd = ';;^IN;!MC0;^PA;!ZO0;;;^IN;!MC0;';
+    isReset = 1;
     send_cmd(str_cmd);
     update_pos_show(X,Y,Z)
+    set(handles.pushbuttonGO, 'Enable','on')
     //zPostion = findobj("tag" , "ZPostion");
     //set(handles.ZOpos, 'String', 'Z0 = ' + msprintf('%.3f',z0) +' mm');
 endfunction
@@ -287,49 +301,37 @@ function go_callback()
      send_cmd(new_cmd);
 endfunction
 
-function xlefthome_callback()
-    update_pos_show(0,Y,Z)
-    if get(handles.checkbox1, 'value') == 1 then
-        go_callback()
-    end
+function xminhome_callback()
+    relative_move(-XMAX, 0, 0);
 endfunction
 
-function xrighthome_callback()
-    update_pos_show(XMAX,Y,Z)
-    if get(handles.checkbox1, 'value') == 1 then
-        go_callback()
-    end
+function xmaxhome_callback()
+    relative_move(XMAX, 0, 0);
 endfunction
 
-function ydownhome_callback()
-    update_pos_show(X,YMAX,Z)
-    if get(handles.checkbox1, 'value') == 1 then
-        go_callback()
-    end
+function yminhome_callback()
+    relative_move(0, -YMAX, 0);
 endfunction
 
-function yuphome_callback()
-    update_pos_show(X,0,Z)
-    if get(handles.checkbox1, 'value') == 1 then
-        go_callback()
-    end
+function ymaxhome_callback()
+    relative_move(0, YMAX, 0);
 endfunction
 
 function printer_callback()
     [output,bOK,exitcode]=dos('rundll32.exe printui.dll,PrintUIEntry /o /n '"Roland MODELA MDX-20'"','-echo')
 endfunction
 
-function editbox1_callback()
+function editboxX_callback()
     global X;
     X = strtod(get(handles.editbox1, 'String'));
 endfunction
 
-function editbox2_callback()
+function editboxY_callback()
     global Y;
     Y = strtod(get(handles.editbox2, 'String'));
 endfunction
 
-function editbox3_callback()
+function editboxZ_callback()
         global Z;
     Z = strtod(get(handles.editbox3, 'String'));
 endfunction
@@ -354,4 +356,48 @@ endfunction
 
 function help_callback()
     dos('start https://chriskyfung.github.io/modela_mdx-15_20_control_panel_scilab/')
+endfunction
+
+function setAsMDX15_callback()
+    global XMAX YMAX
+    XMAX = 152.4;
+    YMAX = 101.6;
+    updateAxisXY(0,0)
+    set(handles.radiobuttonMDX20, 'Enable','off')
+endfunction
+
+function setAsMDX20_callback()
+    global XMAX YMAX
+    XMAX = 203.2;
+    YMAX = 152.4;
+    updateAxisXY(0,0)
+    set(handles.radiobuttonMDX15, 'Enable','off')
+endfunction
+
+function velocity_callback()
+    global V
+    V = get(handles.hsliderV, 'Value');
+endfunction
+
+function checkboxSON_callback()
+    global SON
+    SON = get(handles.checkboxSON, 'Value');
+endfunction
+
+function updateAxisXY(x0,y0)
+   set(handles.frameXY, 'Position', [0, 80-round(y0*(80/YMAX)), 198, 132])
+   drawlater();
+   plot(handles.axisXY, x0, y0, 'b*')
+   isoview2(-2,XMAX, -2, YMAX);
+   drawnow();
+endfunction
+
+function isoview2(xmin, xmax, ymin, ymax)
+    version_numbers = getversion('scilab');
+    if version_numbers(1) >= 6 then
+        isoview on;
+        replot([xmin, ymin, xmax, ymax],handles.axisXY)
+    else
+        isoview(xmin, xmax, ymin, ymax);
+    end
 endfunction
