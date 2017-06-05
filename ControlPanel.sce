@@ -4,13 +4,11 @@
 
 //mode(0);
 //lines(0);
-pathname = get_absolute_file_path('ControlPanel.sce');
-chdir(pathname);
-exec ("commands.sce", -1);
+
 
 function form = new_form()
 	form = figure( "visible", "off", "menubar_visible", "off", "toolbar_visible", "off", "infobar_visible", "off");
-	form.figure_position = [ 805 , 222];
+	form.figure_position = [ 100 , 222];
 	form.axes_size = [ 684 , 438];
 	form.figure_name = "MDX-15/20 Control Panel - Craftweeks";
 	form.tag = "form";
