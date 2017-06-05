@@ -27,7 +27,8 @@ A custom control panel developed for Roland MODELA MDX-15/20 desktop CNC milling
 
 ## How To Use
 1. Launch Scilab
-2. Choose **File** > **Execute**, and then select **ControlPanel.sce** in the file selection dialog
+2. Choose **File** > **Execute**, and then select **__main__.sce** (v0.4 or later) in the file selection dialog
+	- Execute **ControlPanel.sce** for v0.3
 3. Press **Reset** to zero out z-axis
 4. Press **Home** to zero out x- and y-axes
 
