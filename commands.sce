@@ -4,9 +4,9 @@ Y = %nan;
 Z = %nan;
 z0 = %nan;
 V = 15;
-SON = 0;
-XMAX = 233.2;
-YMAX = 156.4;
+SON = 1;
+XMAX = 203.2;
+YMAX = 152.4;
 ZMAX = 60.5;
 isReset = 0;
 isDirectGo = 0; // get(handles.checkbox1, 'value');
@@ -368,8 +368,8 @@ endfunction
 
 function setAsMDX20_callback()
     global XMAX YMAX
-    XMAX = 232.2;
-    YMAX = 156.6;
+    XMAX = 203.2;
+    YMAX = 152.4;
     updateAxisXY(0,0)
     set(handles.radiobuttonMDX15, 'Enable','off')
 endfunction
