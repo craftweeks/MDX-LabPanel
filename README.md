@@ -76,7 +76,7 @@ v0.1 2016-12-23 (The version shown in the introduction video in YouTube)
 - Set custom Z0 level
 
 ## Give me a little help
-- [Donate via PayPal.me](https://www.paypal.me/chrisfungky/50)
+- [Donate via PayPal.Me](https://www.paypal.me/chrisfungky/50)
 
 ## Copyright and License
 
