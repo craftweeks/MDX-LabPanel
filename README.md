@@ -1,4 +1,4 @@
-# modela_mdx-15_20_control_panel_scilab
+# MDX LabPanel
 Scilab-Programmed GUI Control Panel for Roland MODELA MDX-15/20 CNC Machine For Windows
 
 ## [Go to Homepage](https://craftweeks.github.io/modela_mdx-15_20_control_panel_scilab/)
