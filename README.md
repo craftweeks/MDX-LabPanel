@@ -13,7 +13,7 @@ A custom control panel developed for Roland MODELA MDX-15/20 desktop CNC milling
  
 #Screenshot
 
-<a href='https://kl7.info/img-59328e6e79dd9.html'><img src='https://kl7.info/thumb/59328e6e79dd9.png' alt='image'><br />v0.4</a>
+<a href='https://78.media.tumblr.com/bc14d465024555562626d59feb3a6471/tumblr_inline_or2pghONWj1uxegg5_1280.png'><img src='https://78.media.tumblr.com/bc14d465024555562626d59feb3a6471/tumblr_inline_or2pghONWj1uxegg5_1280.png' alt='Screenshot of MDXLabPanel v0.4 (A control panel Roland MODELA MDX-15/20)'><br />v0.4</a>
 
 ## Prerequisite
 * Scilab 5.5 or above (recommended, also compatible with Scilab 6.0 for v0.4 or later)
@@ -33,7 +33,7 @@ A custom control panel developed for Roland MODELA MDX-15/20 desktop CNC milling
 4. Press **Home** to zero out x- and y-axes
 
 ## YouTube:
-Please visit and subscribe our YouTube channel [**[DTClub.swc.HK](https://www.youtube.com/channel/UCGlT2itihZuRxMckNcfcA3A)**]
+Please visit and subscribe our YouTube channel [**[Craftweeks Creative Space](https://www.youtube.com/channel/UCGlT2itihZuRxMckNcfcA3A)**]
 
 * Introduction for v0.1. - 
 [Open Source GUI Control Panel for Roland MODELA MDX-15/20 CNC Machine (Scilab-Programmed GUI)](https://youtu.be/1qtFWHFQnls)
@@ -54,7 +54,7 @@ v0.4 2017-6-4
 - Fixed the filepath issue
 - Fixed the compatibility with Scilab 6.0.0 or later
 
-<a href='https://kl7.info/img-59328e6e79dd9.html'>v0.4<img src='https://kl7.info/thumb/59328e6e79dd9.png' alt='image'  width="250"></a>
+<a href='https://github.com/Craftweeks/MDX-LabPanel/raw/master/Screenshot%20of%20v0.4.1.png'>v0.4<img src='https://github.com/Craftweeks/MDX-LabPanel/raw/master/Screenshot%20of%20v0.4.1.png' alt='Screenshot of MDXLabPanel v0.4 (A control panel Roland MODELA MDX-15/20)'  width="250"></a>
 
 v0.3 2017-4-8
 - Enable to choose the COM port for the machine
@@ -63,13 +63,13 @@ v0.3 2017-4-8
 - Added **Help** button that link to our webpage
 - Changed background color and button style
 
-<a href='https://kl7.info/img-58e88857deb42.html'>v0.3<img src='https://kl7.info/thumb/58e88857deb42.png' alt='image' width="250"></a>
+<a href='https://github.com/Craftweeks/MDX-LabPanel/raw/master/Screenshot%20of%20v0.3.jpg'>v0.3<img src='https://github.com/Craftweeks/MDX-LabPanel/raw/master/Screenshot%20of%20v0.3.jpg' alt='Screenshot of MDXLabPanel v0.3 (A control panel Roland MODELA MDX-15/20)' width="250"></a>
 
 v0.2 2017-1-6
 - Enable to move to a target position at once, by toggling **Direct Go**
 - Added buttons for homing +X, -X, +Y and -Y position
 
-<a href='https://kl7.info/img-58f0e64bdbbe5.html'>v0.2<img src='https://101img.com/upload/small/2017/04/14/58f0e64bdbb42.png' alt='image' width="250"/></a>
+<a href='https://github.com/Craftweeks/MDX-LabPanel/blob/master/Screenshot%20of%20v0.2.png'>v0.2<img src='https://github.com/Craftweeks/MDX-LabPanel/blob/master/Screenshot%20of%20v0.2.png' alt='image' width="250"/></a>
 
 v0.1 2016-12-23 (The version shown in the introduction video in YouTube)
 - Move instantly after press a direction button
@@ -82,6 +82,6 @@ v0.1 2016-12-23 (The version shown in the introduction video in YouTube)
 
 ![Logo of Craftweeks - Hong Kong](https://yt3.ggpht.com/-pWuRX2_jcLk/AAAAAAAAAAI/AAAAAAAAAAA/K3QMmnUWSf8/s100-c-k-no-mo-rj-c0xffffff/photo.jpg) 
 
-**Copyright 2016 - 2017, Chris KY FUNG and the contributors in [Craftweeks - Hong Kong CNC group](https://www.facebook.com/dtclubswchk/)**
+**Copyright 2016 - 2017, Chris KY FUNG and the contributors in [Craftweeks - Hong Kong CNC group](https://www.facebook.com/craftweeks/)**
 
 **License** GNU AFFERO GENERAL PUBLIC LICENSE Version 3 (GNU AGPLv3)
