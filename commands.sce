@@ -10,21 +10,21 @@ YMAX = 152.4;
 ZMAX = 60.5;
 isReset = 0;
 isDirectGo = 0; // get(handles.checkbox1, 'value');
-COM_NUM = 1;
+COM_NUM = 4;
 
 function home_callback()
-//Write your callback for  home  here
-if isReset == 0 then
-    reset_callback();
-end
+    //Write your callback for  home  here
+    if isReset == 0 then
+        reset_callback();
+    end
 
-disp('home')
-global X Y Z
-X = 0.0; Y = 0.0; Z = 0.0+z0;
-str_cmd = '^DF;!MC1;!PZ0,0;V15.0;Z0,0,0;!MC0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;';
-send_cmd(str_cmd);
-update_pos_show(X,Y,Z)
-updateAxisXY(X,Y)
+    disp('home')
+    global X Y Z
+    X = 0.0; Y = 0.0; Z = 0.0+z0;
+    str_cmd = '^DF;!MC1;!PZ0,0;V15.0;Z0,0,0;!MC0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;';
+    send_cmd(str_cmd);
+    update_pos_show(X,Y,Z)
+    updateAxisXY(X,Y)
 endfunction
 
 function send_cmd(str_cmd)
