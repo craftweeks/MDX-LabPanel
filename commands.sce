@@ -1,3 +1,10 @@
+/*
+ * Created Date: April 8th 2017
+ * Author: ky fung
+ * 
+ * Copyright (c) 2017-2019 Craftweeks CNC Group
+ */
+
 global X Y Z z0 V sON XMAX YMAX isReset isDirectGo COM_NUM
 X = %nan;
 Y = %nan;

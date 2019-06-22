@@ -15,7 +15,7 @@ A custom control panel developed for Roland MODELA MDX-15/20 desktop CNC milling
  
 #Screenshot
 
-<img src='https://github.com/Craftweeks/MDX-LabPanel/raw/master/Screenshot%20of%20v0.4.1.png' alt='Screenshot of version 0.4'><br />v0.4
+<img src='/Screenshot%20of%20v0.4.1.png' alt='Screenshot of version 0.4'><br />v0.4
 
 ## Prerequisite
 * Scilab 5.5 or above (recommended, also compatible with Scilab 6.0 for v0.4 or later)
@@ -56,7 +56,7 @@ v0.4 2017-6-4
 - Fixed the filepath issue
 - Fixed the compatibility with Scilab 6.0.0 or later
 
-<img src='https://github.com/Craftweeks/MDX-LabPanel/raw/master/Screenshot%20of%20v0.4.1.png' alt='Screenshot of version 0.4'  width="250"></a>
+<img src='/Screenshot%20of%20v0.4.1.png' alt='Screenshot of version 0.4'  width="250"></a>
 
 v0.3 2017-4-8
 - Enable to choose the COM port for the machine
@@ -65,13 +65,13 @@ v0.3 2017-4-8
 - Added **Help** button that link to our webpage
 - Changed background color and button style
 
-<img src='https://github.com/Craftweeks/MDX-LabPanel/raw/master/Screenshot%20of%20v0.3.jpg' alt='Screenshot of version 0.3' width="250">
+<img src='/Screenshot%20of%20v0.3.jpg' alt='Screenshot of version 0.3' width="250">
 
 v0.2 2017-1-6
 - Enable to move to a target position at once, by toggling **Direct Go**
 - Added buttons for homing +X, -X, +Y and -Y position
 
-<img src='https://github.com/Craftweeks/MDX-LabPanel/blob/master/Screenshot%20of%20v0.2.png?raw=true' alt='Screenshot of version 0.2' width="250"/>
+<img src='/Screenshot%20of%20v0.2.png?raw=true' alt='Screenshot of version 0.2' width="250"/>
 
 v0.1 2016-12-23 (The version shown in the introduction video in YouTube)
 - Move instantly after press a direction button
