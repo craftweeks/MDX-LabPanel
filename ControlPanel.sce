@@ -488,9 +488,9 @@ function popupmenuobj = new_popupmenu1()
 	popupmenuobj = uicontrol(findobj("tag" , "form"),"Style","popupmenu");
 	popupmenuobj.Position = "28|400|81|20";
 	popupmenuobj.Tag = "popupmenu1";
-	popupmenuobj.String = "COM 1|COM 2|COM 3";
-	popupmenuobj.BackgroundColor = "1|1|1";
-	popupmenuobj.Value = 1;
+	popupmenuobj.String = "COM 1|COM 2|COM 3|COM 4|COM 5|COM 6";
+	popupmenuobj.BackgroundColor = "1|1|1|100|1|1";
+	popupmenuobj.Value = 4;
 	popupmenuobj.Callback = "changeport_callback";
 endfunction
 
